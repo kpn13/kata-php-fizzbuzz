@@ -1,0 +1,25 @@
+{
+  "name": "kpn13/kata-php-fizzbuzz",
+  "description": "A PHP implementation of fizzbuzz code kata",
+  "type": "project",
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Kpn13\\KataPhpFizzbuzz\\": "src/"
+    }
+  },
+  "autoload-dev": {
+  "psr-4": {
+    "Test\\Kpn13\\KataPhpFizzbuzz\\": "tests/"
+  }
+},
+  "authors": [
+    {
+      "name": "Karim Pinchon",
+      "email": "kpinchon@kpinchon.com"
+    }
+  ],
+  "require": {}
+}
