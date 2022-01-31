@@ -2,6 +2,7 @@
   "name": "kpn13/kata-php-fizzbuzz",
   "description": "A PHP implementation of fizzbuzz code kata",
   "type": "project",
+  "license": "MIT",
   "require-dev": {
     "phpunit/phpunit": "^9.5"
   },
