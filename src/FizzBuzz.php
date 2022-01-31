@@ -10,11 +10,11 @@ class FizzBuzz
             return "FizzBuzz";
         }
 
-        if ($nb % 3 === 0) {
+        if ($nb % 3 === 0 || str_contains($nb, 3)) {
             return "Fizz";
         }
 
-        if ($nb % 5 === 0) {
+        if ($nb % 5 === 0 || str_contains($nb, 5)) {
             return "Buzz";
         }
 
