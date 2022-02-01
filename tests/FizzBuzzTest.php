@@ -54,4 +54,12 @@ class FizzBuzzTest extends TestCase
 
         $this->assertEquals("Buzz", $result);
     }
+
+    public function testShouldEchoFizzBuzzFor30()
+    {
+        $fizzBuzz = new FizzBuzz();
+        $result = $fizzBuzz(30);
+
+        $this->assertEquals("FizzBuzz", $result);
+    }
 }

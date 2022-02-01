@@ -4,20 +4,39 @@ namespace Kpn13\KataPhpFizzbuzz;
 
 class FizzBuzz
 {
-    public function __invoke(int $nb): int|string
+    const FIZZ = "Fizz";
+    const BUZZ = "Buzz";
+    const FIZZ_BUZZ = self::FIZZ.self::BUZZ;
+
+    public function __invoke(int $number): int|string
     {
-        if ($nb % 3 === 0 && $nb % 5 === 0) {
-            return "FizzBuzz";
+        if ($this->isFizzBuzz($number)) {
+            return self::FIZZ_BUZZ;
         }
 
-        if ($nb % 3 === 0 || str_contains($nb, 3)) {
-            return "Fizz";
+        if ($this->isFizz($number)) {
+            return self::FIZZ;
         }
 
-        if ($nb % 5 === 0 || str_contains($nb, 5)) {
-            return "Buzz";
+        if ($this->isBuzz($number)) {
+            return self::BUZZ;
         }
 
-        return $nb;
+        return $number;
+    }
+
+    private function isFizz(int $number): bool
+    {
+        return $number % 3 === 0 || str_contains($number, 3);
+    }
+
+    private function isBuzz(int $number): bool
+    {
+        return $number % 5 === 0 || str_contains($number, 5);
+    }
+
+    private function isFizzBuzz(int $number): bool
+    {
+        return $number % 3 === 0 && $number % 5 === 0;
     }
 }
